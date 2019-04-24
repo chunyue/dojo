@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+
+    <div>
+      <%= link_to 'Category List', admin_categories_path %>
+      |
+      <%= link_to 'User List', admin_users_path %>
+    </div>
+
+    <div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+        <tr>
+          <td> <%= user.name %> </td>
+          <td> <%= user.email %> </td>
+          <td> 
+            <%= form_for [:admin, user] do |f| %>
+              <%= f.select :role, User::USER_ROLE %>
+              <%= f.submit %>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    </div>
+
+  </div>
+</div>

@@ -7,4 +7,9 @@ class User < ApplicationRecord
   def admin?
     self.role == "admin"
   end
+
+  USER_ROLE = [
+    ["Admin", :admin],
+    ["Normal", :normal]
+  ]
 end
