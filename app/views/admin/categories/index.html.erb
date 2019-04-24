@@ -15,6 +15,9 @@
       <%= f.submit class: "btn btn-primary" %>
       <% end %>
     </div>
+    <% if @category.errors.any? %>
+      <%= @category.errors.full_messages.to_sentence %>
+    <% end %>
 
     <div>
     <table class="table table-striped">
