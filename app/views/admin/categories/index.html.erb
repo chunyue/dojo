@@ -32,7 +32,7 @@
         <tr>
           <td> <%= c.name %> </td>
           <td>
-            <%= link_to 'Edit', edit_admin_category_path(c) %>
+            <%= link_to 'Edit', admin_categories_path(id: c.id) %>
             <%= link_to 'Delete', admin_category_path(c), method: :delete, data:{ confirm: "sure?"}   %>
 
           </td>
