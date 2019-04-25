@@ -25,6 +25,8 @@ gem 'jquery-rails'
 
 gem 'ffaker'
 
+gem 'ransack'
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
